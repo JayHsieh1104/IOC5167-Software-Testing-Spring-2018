@@ -1,9 +1,9 @@
 #include "Triangle_Problem.h"
-#include <string>
+#include <cstdio>
 
 using namespace std;
 
-string Solve_Triangle_Problem(int a, int b, int c) {
+char* Solve_Triangle_Problem(int a, int b, int c) {
     return "feature code has not developed";
 }
 
