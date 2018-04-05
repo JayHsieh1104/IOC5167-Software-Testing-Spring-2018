@@ -3,7 +3,7 @@
 
 using namespace std;
 
-string Ouput(int a, int b, int c) {
+string Solve_Triangle_Problem(int a, int b, int c) {
     return "feature code has not developed";
 }
 
