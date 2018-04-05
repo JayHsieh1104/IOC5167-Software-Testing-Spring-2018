@@ -63,4 +63,26 @@ TEST(Solve_Triangle_Problem, StrongRobustEquivalenceTest) {
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(-1, -1, -1));
 }
 
+TEST(Solve_Triangle_Problem, EdgeTest) {
+  // Test in edge testing form.
+    EXPECT_STREQ("Equilateral", Solve_Triangle_Problem(1, 1, 1);
+    EXPECT_STREQ("Equilateral", Solve_Triangle_Problem(200, 200, 200);
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 2, 1);
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 1, 2);
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(1, 2, 2);
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(1, 200, 200);
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(199, 200, 200);
+    EXPECT_STREQ("Scalene", Solve_Triangle_Problem(2, 100, 101);
+    EXPECT_STREQ("Scalene", Solve_Triangle_Problem(2, 199, 200);
+    EXPECT_STREQ("Scalene", Solve_Triangle_Problem(199, 2, 200);
+    EXPECT_STREQ("Scalene", Solve_Triangle_Problem(199, 200, 2);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(199, 200, 1);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 1, 2);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 1, 100);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 199, 200);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(199, 1, 200);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(199, 200, 1);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 2, 200);
+}
+
 }
