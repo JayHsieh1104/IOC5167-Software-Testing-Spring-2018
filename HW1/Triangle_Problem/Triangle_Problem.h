@@ -1,10 +1,9 @@
 #ifndef GTEST_TRIANGLE_PROBLEM_H_
 #define GTEST TRIANGLE_PROBLEM_H_
 
-// Scan the three input numbers.
-void Input(int a,int b,int c);
+#include <string>
 
-// Print the outcome message.
-string Ouput();
+// Print the outcome message based on the three input numbers.
+std::string Ouput(int a, int b, int c);
 
 #endif //GTEST_TRIANGLE_PROBLEM_H_
