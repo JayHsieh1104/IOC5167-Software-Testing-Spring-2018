@@ -3,7 +3,8 @@
 #include "gtest/gtest.h"
 namespace {
 
-// Test output message is correct or not.
+//In triangle problem, the boundary is [1, 200]
+
 TEST(Solve_Triangle_Problem, NormalBoundaryTest) {
   // Test in normal boundary value form.
     EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(100,100,1));
@@ -29,6 +30,37 @@ TEST(Solve_Triangle_Problem, RobustBoundaryTest) {
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(201,100,100));
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(100,0,100));
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(100,201,100));
+}
+
+TEST(Solve_Triangle_Problem, WeakNormalEquivalenceTest) {
+  // Test in weak normal equivalence class form.
+  // Since no valid subintervals of variables a, b and c exist, 
+  // so the strong normal equivalence class test cases are identical to the weak normal equivalence class test cases.
+	EXPECT_STREQ("Equilateral", Solve_Triangle_Problem(5, 5, 5));
+	EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 2, 3));
+	EXPECT_STREQ("Scalene", Solve_Triangle_Problem(3, 4, 5));
+	EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(4, 1, 2));
+}
+
+TEST(Solve_Triangle_Problem, WeakRobustEquivalenceTest) {
+  // Test in weak robust equivalence class form.
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(-1, 5, 5));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(5, -1, 5));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(5, 5, -1));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(201, 5, 5));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(5, 201, 5));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(5, 5, 201));
+}
+
+TEST(Solve_Triangle_Problem, StrongRobustEquivalenceTest) {
+  // Test in strong robust equivalence class form.
+    EXPECT_STREQ("Out of range", Solve_Triangle_Problem(-1, 5, 5)); 
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(5, -1, 5));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(5, 5, -1));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(-1, -1, 5));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(5, -1, -1));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(-1, 5, -1));
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(-1, -1, -1));
 }
 
 }
