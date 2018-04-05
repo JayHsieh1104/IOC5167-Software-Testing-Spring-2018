@@ -26,7 +26,9 @@ TEST(Solve_Triangle_Problem, RobustBoundaryTest) {
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(100,100,0));
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(100,100,201));
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(0,100,100));
-	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(201,100,100));	
+	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(201,100,100));
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(100,0,100));
 	EXPECT_STREQ("Out of range", Solve_Triangle_Problem(100,201,100));
+}
+
 }
