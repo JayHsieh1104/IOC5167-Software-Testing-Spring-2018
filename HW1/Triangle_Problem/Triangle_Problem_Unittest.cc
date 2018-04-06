@@ -3,7 +3,7 @@
 #include "gtest/gtest.h"
 namespace {
 
-//In triangle problem, the boundary is [1, 200]
+//In the triangle problem, the boundary is [1, 200]
 
 TEST(Solve_Triangle_Problem, NormalBoundaryTest) {
   // Test in normal boundary value form.
@@ -34,6 +34,15 @@ TEST(Solve_Triangle_Problem, RobustBoundaryTest) {
 
 TEST(Solve_Triangle_Problem, WeakNormalEquivalenceTest) {
   // Test in weak normal equivalence class form.
+	EXPECT_STREQ("Equilateral", Solve_Triangle_Problem(5, 5, 5));
+	EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 2, 3));
+	EXPECT_STREQ("Scalene", Solve_Triangle_Problem(3, 4, 5));
+	EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(4, 1, 2));
+}
+
+/*
+TEST(Solve_Triangle_Problem, StrongNormalEquivalenceTest) {
+  // Test in strong normal equivalence class form.
   // Since no valid subintervals of variables a, b and c exist, 
   // so the strong normal equivalence class test cases are identical to the weak normal equivalence class test cases.
 	EXPECT_STREQ("Equilateral", Solve_Triangle_Problem(5, 5, 5));
@@ -41,6 +50,7 @@ TEST(Solve_Triangle_Problem, WeakNormalEquivalenceTest) {
 	EXPECT_STREQ("Scalene", Solve_Triangle_Problem(3, 4, 5));
 	EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(4, 1, 2));
 }
+*/
 
 TEST(Solve_Triangle_Problem, WeakRobustEquivalenceTest) {
   // Test in weak robust equivalence class form.
