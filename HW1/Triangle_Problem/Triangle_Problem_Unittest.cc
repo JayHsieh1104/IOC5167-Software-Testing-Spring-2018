@@ -87,14 +87,14 @@ TEST(Solve_Triangle_Problem, EdgeTest) {
 
 TEST(Solve_Triangle_Problem, DecisionTableTest) {
   // Test in decision table testing form.
-    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(4, 1, 2);
-    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 4, 2);
-    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 2, 4);
-    EXPECT_STREQ("Equilateral", Solve_Triangle_Problem(5, 5, 5);
-    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 2, 3);
-    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 3, 2);
-    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(3, 2, 2);
-    EXPECT_STREQ("Scalene", Solve_Triangle_Problem(3, 4, 5);
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(4, 1, 2));
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 4, 2));
+    EXPECT_STREQ("Not a triangle", Solve_Triangle_Problem(1, 2, 4));
+    EXPECT_STREQ("Equilateral", Solve_Triangle_Problem(5, 5, 5));
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 2, 3));
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(2, 3, 2));
+    EXPECT_STREQ("Isosceles", Solve_Triangle_Problem(3, 2, 2));
+    EXPECT_STREQ("Scalene", Solve_Triangle_Problem(3, 4, 5));
 }
 
 }
