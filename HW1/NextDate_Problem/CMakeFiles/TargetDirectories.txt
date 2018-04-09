@@ -1,4 +1,0 @@
-/home/sqlab/lib/googletest/googletest/HW1/2018Spring-SoftwareTesting/NextDate_Problem/CMakeFiles/rebuild_cache.dir
-/home/sqlab/lib/googletest/googletest/HW1/2018Spring-SoftwareTesting/NextDate_Problem/CMakeFiles/edit_cache.dir
-/home/sqlab/lib/googletest/googletest/HW1/2018Spring-SoftwareTesting/NextDate_Problem/CMakeFiles/gtest_main.dir
-/home/sqlab/lib/googletest/googletest/HW1/2018Spring-SoftwareTesting/NextDate_Problem/CMakeFiles/gtest.dir
