@@ -29,7 +29,7 @@ TEST(Solve_NextDate_Problem, NormalBoundaryTest) {
 TEST(Solve_NextDate_Problem, RobustBoundaryTest) {
 	// Test in robust boundary value form.
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(1811, 4, 10)); // year min-
-    EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2012, 4, 10)); // year max+
+    EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2013, 4, 10)); // year max+
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 0, 10)); // month min-
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 13, 10)); // month max+
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 1, 0)); // day min-
