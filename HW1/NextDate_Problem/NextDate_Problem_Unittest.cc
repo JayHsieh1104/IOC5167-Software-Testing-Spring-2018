@@ -106,7 +106,21 @@ TEST(Solve_Triangle_Problem, StrongRobustEquivalenceTest) {
 
 TEST(Solve_Triangle_Problem, EdgeTest) {
   // Test in edge testing form.
-
+    EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 4, 0));
+    EXPECT_STREQ("2000/4/2", Solve_NextDate_Problem(2000, 4, 1));
+    EXPECT_STREQ("2000/4/30", Solve_NextDate_Problem(2000,4,29));
+    EXPECT_STREQ("2000/5/1", Solve_NextDate_Problem(2000,4,30));
+    EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000,4,31));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 3, 0));
+    EXPECT_STREQ("2000/3/2", Solve_NextDate_Problem(2000, 3, 1));
+    EXPECT_STREQ("2000/3/31", Solve_NextDate_Problem(2000, 3, 30));
+    EXPECT_STREQ("2000/4/1", Solve_NextDate_Problem(2000, 3, 31));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 3, 32));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000,2,0));
+    EXPECT_STREQ("2000/2/2", Solve_NextDate_Problem(2000,2,1));
+    EXPECT_STREQ("2000/2/29", Solve_NextDate_Problem(2000,2,28));
+    EXPECT_STREQ("2000/3/1", Solve_NextDate_Problem(2000,2,29));
+    EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000,2,30));
 }
 
 TEST(Solve_Triangle_Problem, DecisionTableTest) {
