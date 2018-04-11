@@ -82,7 +82,7 @@ char* Solve_NextDate_Problem(int year, int month, int day) {
 		return "Unexpected Error";
 	}
 
-	x = sprintf(the_output,"%d/%d/%d",tomorrow_month,tomorrow_day,tomorrow_year);
+	x = sprintf(the_output,"%d/%d/%d",tomorrow_year,tomorrow_month,tomorrow_day);
 	
 	//return the_output;
 	output=the_output;
