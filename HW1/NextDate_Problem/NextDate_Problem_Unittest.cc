@@ -55,9 +55,9 @@ TEST(Solve_NextDate_Problem, StrongNormalEquivalenceTest) {
 	EXPECT_STREQ("2000/6/30", Solve_NextDate_Problem(2000, 6, 29)); // SN4
 	EXPECT_STREQ("1996/6/30", Solve_NextDate_Problem(1996, 6, 29)); // SN5
 	EXPECT_STREQ("2002/6/30", Solve_NextDate_Problem(2002, 6, 29)); // SN6
-	EXPECT_STREQ("2000/7/01", Solve_NextDate_Problem(2000, 6, 30)); // SN7
-	EXPECT_STREQ("1996/7/01", Solve_NextDate_Problem(1996, 6, 30)); // SN8
-	EXPECT_STREQ("2002/7/01", Solve_NextDate_Problem(2002, 6, 30)); // SN9
+	EXPECT_STREQ("2000/7/1", Solve_NextDate_Problem(2000, 6, 30)); // SN7
+	EXPECT_STREQ("1996/7/1", Solve_NextDate_Problem(1996, 6, 30)); // SN8
+	EXPECT_STREQ("2002/7/1", Solve_NextDate_Problem(2002, 6, 30)); // SN9
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 6, 31)); // SN10
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(1996, 6, 31)); // SN11
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2002, 6, 31)); // SN12
@@ -73,7 +73,7 @@ TEST(Solve_NextDate_Problem, StrongNormalEquivalenceTest) {
 	EXPECT_STREQ("2000/8/1", Solve_NextDate_Problem(2000, 7, 31)); // SN22
 	EXPECT_STREQ("1996/8/1", Solve_NextDate_Problem(1996, 7, 31)); // SN23
 	EXPECT_STREQ("2002/8/1", Solve_NextDate_Problem(2002, 7, 31)); // SN24	
-	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 2, 29)); // SN25
+	EXPECT_STREQ("2000/3/1", Solve_NextDate_Problem(2000, 2, 29)); // SN25
 	EXPECT_STREQ("1996/3/1", Solve_NextDate_Problem(1996, 2, 29)); // SN26
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2002, 2, 29)); // SN27	
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 2, 30)); // SN28
@@ -133,7 +133,7 @@ TEST(Solve_NextDate_Problem, DecisionTableTest) {
     EXPECT_STREQ("2001/12/16", Solve_NextDate_Problem(2001, 12, 15));
     EXPECT_STREQ("2002/1/1", Solve_NextDate_Problem(2001, 12, 31));
     EXPECT_STREQ("2001/2/16", Solve_NextDate_Problem(2001, 2, 15));
-    EXPECT_STREQ("2001/2/29", Solve_NextDate_Problem(2001, 2, 28));
+    EXPECT_STREQ("2000/2/29", Solve_NextDate_Problem(2000, 2, 28));
     EXPECT_STREQ("2001/3/1", Solve_NextDate_Problem(2001, 2, 28));
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2001, 2, 29));
     EXPECT_STREQ("2004/3/1", Solve_NextDate_Problem(2004, 2, 29));
