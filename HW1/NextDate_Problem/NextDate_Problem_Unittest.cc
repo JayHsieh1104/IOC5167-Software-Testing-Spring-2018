@@ -125,19 +125,19 @@ TEST(Solve_Triangle_Problem, EdgeTest) {
 
 TEST(Solve_Triangle_Problem, DecisionTableTest) {
   // Test in decision table testing form.
-    EXPECT_STREQ("2001/4/16", nextdate(2001,4,15,test));
-    EXPECT_STREQ("2001/5/1", nextdate(2001,4,30,test));
-    EXPECT_STREQ("Invalid Input", nextdate(2001,4,31,test));
-    EXPECT_STREQ("2001/1/16", nextdate(2001,1,15,test));
-    EXPECT_STREQ("2001/2/1", nextdate(2001,1,31,test));
-    EXPECT_STREQ("2001/12/16", nextdate(2001,12,15,test));
-    EXPECT_STREQ("2002/1/1", nextdate(2001,12,31,test));
-    EXPECT_STREQ("2001/2/16", nextdate(2001,2,15,test));
-    EXPECT_STREQ("2001/2/29", nextdate(2001,2,28,test));
-    EXPECT_STREQ("2001/3/1", nextdate(2001,2,28,test));
-	EXPECT_STREQ("Invalid Input", nextdate(2001,2,29,test));
-    EXPECT_STREQ("2004/3/1", nextdate(2004,2,29,test));
-	EXPECT_STREQ("Invalid Input", nextdate(2001,2,30,test));
+    EXPECT_STREQ("2001/4/16", Solve_NextDate_Problem(2001, 4, 15));
+    EXPECT_STREQ("2001/5/1", Solve_NextDate_Problem(2001, 4,3 0));
+    EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2001, 4, 31));
+    EXPECT_STREQ("2001/1/16", Solve_NextDate_Problem(2001, 1, 15));
+    EXPECT_STREQ("2001/2/1", Solve_NextDate_Problem(2001, 1, 31));
+    EXPECT_STREQ("2001/12/16", Solve_NextDate_Problem(2001, 12, 15));
+    EXPECT_STREQ("2002/1/1", Solve_NextDate_Problem(2001, 12, 31));
+    EXPECT_STREQ("2001/2/16", Solve_NextDate_Problem(2001, 2, 15));
+    EXPECT_STREQ("2001/2/29", Solve_NextDate_Problem(2001, 2, 28));
+    EXPECT_STREQ("2001/3/1", Solve_NextDate_Problem(2001, 2, 28));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2001, 2, 29));
+    EXPECT_STREQ("2004/3/1", Solve_NextDate_Problem(2004, 2, 29));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2001, 2, 30));
 }
 
 }
