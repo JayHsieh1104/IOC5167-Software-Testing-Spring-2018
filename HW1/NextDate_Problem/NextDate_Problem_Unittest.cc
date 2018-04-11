@@ -39,7 +39,7 @@ TEST(Solve_NextDate_Problem, RobustBoundaryTest) {
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 4, 31)); // day max+
 }
 
-TEST(Solve_Triangle_Problem, WeakNormalEquivalenceTest) {
+TEST(Solve_NextDate_Problem, WeakNormalEquivalenceTest) {
   // Test in weak normal equivalence class form.
 	EXPECT_STREQ("2000/6/15", Solve_NextDate_Problem(2000, 6, 14)); // WN1
 	EXPECT_STREQ("1996/7/30", Solve_NextDate_Problem(1996, 7, 29)); // WN2
@@ -47,7 +47,7 @@ TEST(Solve_Triangle_Problem, WeakNormalEquivalenceTest) {
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 6, 31)); // WN4
 }
 
-TEST(Solve_Triangle_Problem, StrongNormalEquivalenceTest) {
+TEST(Solve_NextDate_Problem, StrongNormalEquivalenceTest) {
   // Test in strong normal equivalence class form.
 	EXPECT_STREQ("2000/6/15", Solve_NextDate_Problem(2000, 6, 14)); // SN1
 	EXPECT_STREQ("1996/6/15", Solve_NextDate_Problem(1996, 6, 14)); // SN2
@@ -82,7 +82,7 @@ TEST(Solve_Triangle_Problem, StrongNormalEquivalenceTest) {
 }
 
 
-TEST(Solve_Triangle_Problem, WeakRobustEquivalenceTest) {
+TEST(Solve_NextDate_Problem, WeakRobustEquivalenceTest) {
   // Test in weak robust equivalence class form.
     EXPECT_STREQ("1996/6/15", Solve_NextDate_Problem(1996, 6, 14)); // WR1
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(1912, -1, 15) ); // WR2, month min-
@@ -93,7 +93,7 @@ TEST(Solve_Triangle_Problem, WeakRobustEquivalenceTest) {
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2013, 6, 15) ); // WR7, year max+
 }
 
-TEST(Solve_Triangle_Problem, StrongRobustEquivalenceTest) {
+TEST(Solve_NextDate_Problem, StrongRobustEquivalenceTest) {
   // Test in strong robust equivalence class form.
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(1912, -1, 15) ); // SR1, month min-
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(1912, 6, -1) ); // SR2, day min-
@@ -104,7 +104,7 @@ TEST(Solve_Triangle_Problem, StrongRobustEquivalenceTest) {
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(1811, -1, -1) ); // SR7, year, month and day min-
 }
 
-TEST(Solve_Triangle_Problem, EdgeTest) {
+TEST(Solve_NextDate_Problem, EdgeTest) {
   // Test in edge testing form.
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000, 4, 0));
     EXPECT_STREQ("2000/4/2", Solve_NextDate_Problem(2000, 4, 1));
@@ -123,7 +123,7 @@ TEST(Solve_Triangle_Problem, EdgeTest) {
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000,2,30));
 }
 
-TEST(Solve_Triangle_Problem, DecisionTableTest) {
+TEST(Solve_NextDate_Problem, DecisionTableTest) {
   // Test in decision table testing form.
     EXPECT_STREQ("2001/4/16", Solve_NextDate_Problem(2001, 4, 15));
     EXPECT_STREQ("2001/5/1", Solve_NextDate_Problem(2001, 4,30));
