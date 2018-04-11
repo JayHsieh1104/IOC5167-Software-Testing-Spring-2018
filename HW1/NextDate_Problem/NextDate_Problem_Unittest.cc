@@ -126,7 +126,7 @@ TEST(Solve_Triangle_Problem, EdgeTest) {
 TEST(Solve_Triangle_Problem, DecisionTableTest) {
   // Test in decision table testing form.
     EXPECT_STREQ("2001/4/16", Solve_NextDate_Problem(2001, 4, 15));
-    EXPECT_STREQ("2001/5/1", Solve_NextDate_Problem(2001, 4,3 0));
+    EXPECT_STREQ("2001/5/1", Solve_NextDate_Problem(2001, 4,30));
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2001, 4, 31));
     EXPECT_STREQ("2001/1/16", Solve_NextDate_Problem(2001, 1, 15));
     EXPECT_STREQ("2001/2/1", Solve_NextDate_Problem(2001, 1, 31));
