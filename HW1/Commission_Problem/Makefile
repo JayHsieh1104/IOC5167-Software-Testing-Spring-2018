@@ -17,7 +17,7 @@
 GTEST_DIR = /home/sqlab/lib/googletest/googletest
 
 # Where to find user code.
-USER_DIR = ../NextDate_Problem 
+USER_DIR = ../Commission_Problem 
 
 # Flags passed to the preprocessor.
 # Set Google Test's header directory as a system directory, such that
@@ -29,7 +29,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = nextdate_problem_unittest
+TESTS = commission_problem_unittest
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -71,12 +71,12 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-nextdate_problem.o : NextDate_Problem.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c NextDate_Problem.cc
+commission_problem.o : Commission_Problem.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c Commission_Problem.cc
 
-nextdate_problem_unittest.o : NextDate_Problem_Unittest.cc \
-                              NextDate_Problem.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c NextDate_Problem_Unittest.cc
+commission_problem_unittest.o : Commission_Problem_Unittest.cc \
+                              Commission_Problem.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c Commission_Problem_Unittest.cc
 
-nextdate_problem_unittest : NextDate_Problem.o NextDate_Problem_Unittest.o gtest_main.a
+commission_problem_unittest : Commission_Problem.o Commission_Problem_Unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
