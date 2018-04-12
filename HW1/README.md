@@ -1,6 +1,4 @@
 # [NCTU CS IOC5167] Software Testing HW1
->Author：0313404 資工系四年級 謝秉潔
----
 
 ## Requirement
 * Implement the Triangle, NextDate, and Commission problems by TDD
