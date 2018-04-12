@@ -6,6 +6,7 @@ namespace {
 // 1 ≤ fans ≤ 70 
 // 1 ≤ pumps ≤ 80 
 // 1 ≤ bodies ≤ 90
+// output -1 = invalid input
 
 TEST(Solve_NextDate_Problem, NormalBoundaryTest) {
 	// Test in normal boundary value form.
@@ -26,7 +27,16 @@ TEST(Solve_NextDate_Problem, NormalBoundaryTest) {
 
 TEST(Solve_NextDate_Problem, RobustBoundaryTest) {
 	// Test in robust boundary value form.
-
+	EXPECT_EQ(-1, Solve_Commission_Problem(35, 40, 0)); // Barrel min-
+	EXPECT_EQ(-1, Solve_Commission_Problem(35, 40, 91)); // Barrel max+
+	EXPECT_EQ(-1, Solve_Commission_Problem(35, 0, 45)); // Stock min-
+	EXPECT_EQ(-1, Solve_Commission_Problem(35, 81, 45)); // Stock max+
+	EXPECT_EQ(-1, Solve_Commission_Problem(0, 40, 45)); // Lock min-
+	EXPECT_EQ(-1, Solve_Commission_Problem(71, 40, 45)); // Lock max+
+	EXPECT_EQ(-1, Solve_Commission_Problem(35, 0, 0)); // Barrel, Stock min-
+	EXPECT_EQ(-1, Solve_Commission_Problem(0, 40, 0)); // Barrel, Lock min-
+	EXPECT_EQ(-1, Solve_Commission_Problem(0, 0, 45)); // Stock, Lock min-	
+	EXPECT_EQ(-1, Solve_Commission_Problem(0, 0, 0)); // all min-
 }
 
 TEST(Solve_NextDate_Problem, WeakNormalEquivalenceTest) {
