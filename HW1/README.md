@@ -256,7 +256,8 @@
     4. Do testing and then passed 5 tests, failed 3 tests. 
     ![](https://i.imgur.com/384CmfI.png)
 
-    5. Find the bugs in unittest program and fix them. 
+    5. Find the bugs in unittest program and fix them.
+    
     ![](https://i.imgur.com/qWJ3tIi.png) 
     ![](https://i.imgur.com/pBtD7R5.png)
 
