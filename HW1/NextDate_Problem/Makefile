@@ -14,7 +14,7 @@
 
 # Points to the root of Google Test, relative to where this file is.
 # Remember to tweak this if you move this file.
-GTEST_DIR = /home/sqlab/lib/googletest/googletest
+GTEST_DIR = ../../googletest
 
 # Where to find user code.
 USER_DIR = ../NextDate_Problem 
