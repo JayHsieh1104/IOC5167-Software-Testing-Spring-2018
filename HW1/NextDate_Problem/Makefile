@@ -80,3 +80,5 @@ nextdate_problem_unittest.o : NextDate_Problem_Unittest.cc \
 
 nextdate_problem_unittest : NextDate_Problem.o NextDate_Problem_Unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+
+#
