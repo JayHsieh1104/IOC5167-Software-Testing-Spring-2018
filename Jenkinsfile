@@ -1,11 +1,24 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent {
+        docker {
+            image 'gcc'
+        }
+    }
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'python --version'
+                sh 'HW1/Triangle_Problem -C make'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'HW1/Triangle_Problem -C make test'
+            }
+        }
+        stage('Clean') {
+            steps {
+                sh 'HW1/Triangle_Problem -C make clean'
+            }
+        }		
     }
 }
