@@ -40,6 +40,9 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 
 all : $(TESTS)
 
+test : nextdate_problem_unittest
+		./nextdate_problem_unittest
+
 clean :
 	rm -f $(TESTS) gtest.a gtest_main.a *.o
 
