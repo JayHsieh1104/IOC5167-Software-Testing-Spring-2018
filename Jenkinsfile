@@ -5,25 +5,15 @@ pipeline {
         }
     }
     stages {
-		stage('git clone') {
-			steps {
-				git clone "https://github.com/JayHsieh1104/2018Spring-SoftwareTesting.git"
-			}
-		}
         stage('Build') {
             steps {
-                sh 'HW1/Triangle_Problem -C make'
+                sh 'make -C make'
             }
         }
         stage('Test') {
             steps {
-                sh 'HW1/Triangle_Problem -C make test'
+                sh 'make -C make test'
             }
         }
-        stage('Clean') {
-            steps {
-                sh 'HW1/Triangle_Problem -C make clean'
-            }
-        }		
     }
 }
