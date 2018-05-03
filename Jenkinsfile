@@ -7,17 +7,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'HW1/Triangle_Problem -C make'
+                sh 'make -C HW1\Triangle_Problem'
             }
         }
         stage('Test') {
             steps {
-                sh 'HW1/Triangle_Problem -C make test'
+                sh 'make -C HW1\Triangle_Problem test'
             }
         }
         stage('Clean') {
             steps {
-                sh 'HW1/Triangle_Problem -C make clean'
+                sh 'make -C HW1\Triangle_Problem clean'
             }
         }		
     }
