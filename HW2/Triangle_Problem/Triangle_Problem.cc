@@ -17,5 +17,5 @@ char* Solve_Triangle_Problem(int a, int b, int c) {
 	}
 	return "Scalene";
 */
-	return "Feature code is not implemented"
+	return "Feature code is not implemented";
 }
