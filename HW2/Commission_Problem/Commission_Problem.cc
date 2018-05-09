@@ -5,6 +5,7 @@
 using namespace std;
 
 double Solve_Commission_Problem(int lock, int stock, int barrel) {
+/*
     double sales;
     double commission;
     if (lock == -1)
@@ -24,5 +25,7 @@ double Solve_Commission_Problem(int lock, int stock, int barrel) {
         commission += (sales - 1800) * 0.2;
     }
     return commission;
+*/	
+	return -999;
 }
 

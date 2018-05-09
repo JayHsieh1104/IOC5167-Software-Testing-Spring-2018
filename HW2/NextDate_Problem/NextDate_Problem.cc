@@ -9,6 +9,7 @@ using namespace std;
 // c3. 1812 <= year <= 2012
 
 char* Solve_NextDate_Problem(int year, int month, int day) {
+/*
 	char *output=NULL;
 	char the_output[1000];
 	int tomorrow_day = day;
@@ -84,9 +85,9 @@ char* Solve_NextDate_Problem(int year, int month, int day) {
 
 	x = sprintf(the_output,"%d/%d/%d",tomorrow_year,tomorrow_month,tomorrow_day);
 	
-	//return the_output;
-	output=the_output;
+	output = the_output;
 	return output;
-
+*/	
+	return "Feature code is not implemented"
 }
 
