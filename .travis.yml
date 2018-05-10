@@ -10,6 +10,8 @@ script:
 - make -C HW2/Triangle_Problem gcov
 - make -C HW2/NextDate_Problem test
 - make -C HW2/NextDate_Problem gcov
+- make -C HW2/Commission_Problem test
+- make -C HW2/Commission_Problem gcov
 branches:
   only:
   - master
