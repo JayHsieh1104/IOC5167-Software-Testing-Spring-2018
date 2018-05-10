@@ -50,7 +50,7 @@ gcov : triangle_problem_unittest
 		gcov Triangle_Problem.cc
 
 clean :
-	rm -f $(TESTS) gtest.a gtest_main.a *.o
+	rm -f $(TESTS) gtest.a gtest_main.a *.o *.gcno *.gcda *.gcov
 
 # Builds gtest.a and gtest_main.a.
 
@@ -81,11 +81,11 @@ gtest_main.a : gtest-all.o gtest_main.o
 # function.
 
 triangle_problem.o : Triangle_Problem.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c Triangle_Problem.cc
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(GCOVFLAGS) -c Triangle_Problem.cc
 
 triangle_problem_unittest.o : Triangle_Problem_Unittest.cc \
                               Triangle_Problem.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c Triangle_Problem_Unittest.cc
 
 triangle_problem_unittest : Triangle_Problem.o Triangle_Problem_Unittest.o gtest_main.a
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(GCOVFLAGS) -lpthread $^ -o $@
