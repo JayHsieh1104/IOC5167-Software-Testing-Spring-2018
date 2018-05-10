@@ -9,7 +9,6 @@ script:
 - make -C HW2/Triangle_Problem
 - make -C HW2/Triangle_Problem test
 - make -C HW2/Triangle_Problem gcov
-- make -C HW2/Triangle_Problem clean
 branches:
   only:
   - master
