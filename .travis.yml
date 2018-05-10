@@ -4,10 +4,10 @@ os:
 compiler:
   - g++
 script:
-  - make -C HW2/Triangle_Problem -C make
-  - make -C HW2/Triangle_Problem -C make test
-  - make -C HW2/Triangle_Problem -C make gcov
-  - make -C HW2/Triangle_Problem -C make clean
+  - make -C HW2/Triangle_Problem make
+  - make -C HW2/Triangle_Problem make test
+  - make -C HW2/Triangle_Problem make gcov
+  - make -C HW2/Triangle_Problem make clean
 branches:
   only:
     - master
