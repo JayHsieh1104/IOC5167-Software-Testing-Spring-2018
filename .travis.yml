@@ -3,6 +3,8 @@ compiler:
 - g++
 os:
 - linux
+install:
+  - sudo pip install codecov
 script:
 - make -C HW2/Triangle_Problem
 - make -C HW2/Triangle_Problem test
@@ -11,3 +13,5 @@ script:
 branches:
   only:
   - master
+after_success:
+  - codecov -t c5ea4a7b-3bb6-400a-b2a3-7b4a37d7edee -X gcov  
