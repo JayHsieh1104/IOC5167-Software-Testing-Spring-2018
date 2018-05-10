@@ -24,6 +24,9 @@ USER_DIR = ../Triangle_Problem
 # the compiler doesn't generate warnings in Google Test headers.
 CPPFLAGS += -isystem $(GTEST_DIR)/include
 
+# Combine with gcov
+GCOVFLAGS += -fprofile-arcs -ftest-coverage
+
 # Flags passed to the C++ compiler.
 CXXFLAGS += -g -Wall -Wextra -pthread
 
@@ -42,6 +45,9 @@ all : $(TESTS)
 
 test : triangle_problem_unittest
 		./triangle_problem_unittest
+
+gcov : triangle_problem_unittest 		
+		gcov Triangle_Problem.cc
 
 clean :
 	rm -f $(TESTS) gtest.a gtest_main.a *.o
