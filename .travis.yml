@@ -6,9 +6,10 @@ os:
 install:
   - sudo pip install codecov
 script:
-- make -C HW2/Triangle_Problem
 - make -C HW2/Triangle_Problem test
 - make -C HW2/Triangle_Problem gcov
+- make -C HW2/NextDate_Problem test
+- make -C HW2/NextDate_Problem gcov
 branches:
   only:
   - master
