@@ -45,6 +45,12 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 
 all : $(TESTS)
 
+test : Triangle_Problem_Unittest
+		./Triangle_Problem_Unittest
+
+gcov : Triangle_Problem_Unittest		
+		gcov Triangle_Problem.cc
+
 clean :
 	rm -f $(TESTS) gtest.a gtest_main.a *.o *.gcno *.gcda *.gcov
 
@@ -85,9 +91,4 @@ Triangle_Problem_Unittest.o : Triangle_Problem_Unittest.cc \
 
 Triangle_Problem_Unittest : Triangle_Problem.o Triangle_Problem_Unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(GCOVFLAGS) -lpthread $^ -o $@
-
-test : Triangle_Problem_Unittest
-		./Triangle_Problem_Unittest
-
-gcov : Triangle_Problem_Unittest		
-		gcov Triangle_Problem.cc
+	
