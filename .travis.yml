@@ -1,13 +1,13 @@
 language: cpp
-os:
-  - linux
 compiler:
-  - g++
+- g++
+os:
+- linux
 script:
-  - make -C HW2/Triangle_Problem make
-  - make -C HW2/Triangle_Problem make test
-  - make -C HW2/Triangle_Problem make gcov
-  - make -C HW2/Triangle_Problem make clean
+- make -C HW2/Triangle_Problem
+- make -C HW2/Triangle_Problem test
+- make -C HW2/Triangle_Problem gcov
+- make -C HW2/Triangle_Problem clean
 branches:
   only:
-    - master
+  - master
