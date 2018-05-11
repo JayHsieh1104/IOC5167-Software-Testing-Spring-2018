@@ -49,7 +49,7 @@ test : Commission_Problem_Unittest
 		./Commission_Problem_Unittest
 
 gcov : Commission_Problem_Unittest
-		./Commission_Problem.cc		
+		gcov Commission_Problem.cc		
 		
 clean :
 	rm -f $(TESTS) gtest.a gtest_main.a *.o

@@ -49,7 +49,7 @@ test : Nextdate_Problem_Unittest
 		./Nextdate_Problem_Unittest
 
 gcov : Nextdate_Problem_Unittest
-		./NextDate_Problem.cc
+		gcov NextDate_Problem.cc
 		
 clean :
 	rm -f $(TESTS) gtest.a gtest_main.a *.o
