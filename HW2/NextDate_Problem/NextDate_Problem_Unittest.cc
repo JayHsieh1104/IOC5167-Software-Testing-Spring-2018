@@ -30,11 +30,11 @@ TEST(Solve_NextDate_Problem, MCDC_Testing) {
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(1811,6,10));
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2010,13,10));
     EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2000,10,0));
-	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2012,2,40));
-	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2012,11,40));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2012,2,30));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2012,11,31));
 	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2007,2,29));
-	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2007,2,40));
-	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2007,11,40));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2007,2,30));
+	EXPECT_STREQ("Invalid Input", Solve_NextDate_Problem(2007,11,31));
     EXPECT_STREQ("2001/1/1", Solve_NextDate_Problem(2000,12,31));
     EXPECT_STREQ("2013/1/1", Solve_NextDate_Problem(2012,12,31));
     EXPECT_STREQ("2012/2/1", Solve_NextDate_Problem(2012,1,31));
