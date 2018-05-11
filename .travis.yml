@@ -6,6 +6,12 @@ os:
 install:
   - sudo pip install codecov
 script:
+- make -C HW1/Triangle_Problem test
+- make -C HW1/Triangle_Problem gcov
+- make -C HW1/NextDate_Problem test
+- make -C HW1/NextDate_Problem gcov
+- make -C HW1/Commission_Problem test
+- make -C HW1/Commission_Problem gcov
 - make -C HW2/Triangle_Problem test
 - make -C HW2/Triangle_Problem gcov
 - make -C HW2/NextDate_Problem test
