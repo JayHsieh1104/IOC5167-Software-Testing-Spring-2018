@@ -34,7 +34,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = Nextdate_Problem_Unittest
+TESTS = NextDate_Problem_Unittest
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -45,10 +45,10 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 
 all : $(TESTS)
 
-test : Nextdate_Problem_Unittest
-		./Nextdate_Problem_Unittest
+test : NextDate_Problem_Unittest
+		./NextDate_Problem_Unittest
 
-gcov : Nextdate_Problem_Unittest
+gcov : NextDate_Problem_Unittest
 		gcov NextDate_Problem.cc
 		
 clean :
@@ -82,12 +82,12 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-Nextdate_Problem.o : NextDate_Problem.h $(GTEST_HEADERS)
+NextDate_Problem.o : NextDate_Problem.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(GCOVFLAGS) -c NextDate_Problem.cc
 
-Nextdate_Problem_Unittest.o : NextDate_Problem_Unittest.cc \
+NextDate_Problem_Unittest.o : NextDate_Problem_Unittest.cc \
                               NextDate_Problem.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c NextDate_Problem_Unittest.cc
 
-Nextdate_Problem_Unittest : NextDate_Problem.o NextDate_Problem_Unittest.o gtest_main.a
+NextDate_Problem_Unittest : NextDate_Problem.o NextDate_Problem_Unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(GCOVFLAGS) -lpthread $^ -o $@
