@@ -14,7 +14,6 @@ char* Solve_NextDate_Problem(int year, int month, int day) {
 	int tomorrow_day = day;
 	int tomorrow_month = month;
 	int tomorrow_year = year;
-	int x;
 
 	if((year>2012||year<1812)||(day>31 || day<1)||(month>12 || month<1)) {			
 		return "Invalid Input";
@@ -84,9 +83,7 @@ char* Solve_NextDate_Problem(int year, int month, int day) {
 
 	x = sprintf(the_output,"%d/%d/%d",tomorrow_year,tomorrow_month,tomorrow_day);
 	
-	//return the_output;
 	output=the_output;
 	return output;
-
 }
 
