@@ -8,23 +8,12 @@ namespace {
 // 1 ≤ bodies ≤ 90
 // output -1 = invalid input
 
-TEST(Solve_Commission_Problem, NormalBoundaryTest) {
-	// Test in normal boundary value form.
-	EXPECT_EQ(420, Solve_Commission_Problem(35, 40, 1)); // Barrel min
-	EXPECT_EQ(425, Solve_Commission_Problem(35, 40, 2)); // Barrel min+
-	EXPECT_EQ(860, Solve_Commission_Problem(35, 40, 89)); // Barrel max-
-	EXPECT_EQ(865, Solve_Commission_Problem(35, 40, 90)); // Barrel max
-	EXPECT_EQ(406, Solve_Commission_Problem(35, 1, 45)); // Stock min
-	EXPECT_EQ(412, Solve_Commission_Problem(35, 2, 45)); // Stock min+
-	EXPECT_EQ(874, Solve_Commission_Problem(35, 79, 45)); // Stock max-
-	EXPECT_EQ(880, Solve_Commission_Problem(35, 80, 45)); // Stock max
-	EXPECT_EQ(334, Solve_Commission_Problem(1, 40, 45)); // Lock min
-	EXPECT_EQ(343, Solve_Commission_Problem(2, 40, 45)); // Lock min+
-	EXPECT_EQ(946, Solve_Commission_Problem(69, 40, 45)); // Lock max-
-	EXPECT_EQ(955, Solve_Commission_Problem(70, 40, 45)); // Lock max
-	EXPECT_EQ(640, Solve_Commission_Problem(35, 40, 45)); // all normal
+TEST(Solve_Commission_Problem, C0_Testing) {
+	EXPECT_EQ(-1, Solve_Commission_Problem(0, 10, 10));
+	EXPECT_EQ(640, Solve_Commission_Problem(35, 40, 45)); 
 }
 
+/*
 TEST(Solve_Commission_Problem, RobustBoundaryTest) {
 	// Test in robust boundary value form.
 	EXPECT_EQ(-1, Solve_Commission_Problem(35, 40, 0)); // Barrel min-
@@ -111,5 +100,6 @@ TEST(Solve_Commission_Problem, DecisionTableTest) {
     EXPECT_EQ(-1, Solve_Commission_Problem(10, 10, 0));
     EXPECT_EQ(-1, Solve_Commission_Problem(10, 10, 91));
 }
+*/
 
 }
