@@ -13,6 +13,12 @@ TEST(Solve_Commission_Problem, C0_Testing) {
 	EXPECT_EQ(640, Solve_Commission_Problem(35, 40, 45)); 
 }
 
+TEST(Solve_Commission_Problem, C1_Testing) {
+	EXPECT_EQ(-1, Solve_Commission_Problem(0, 10, 10));
+	EXPECT_EQ(220, Solve_Commission_Problem(20, 20, 12));
+	EXPECT_EQ(1400, Solve_Commission_Problem(69, 79, 89)); 
+}
+
 /*
 TEST(Solve_Commission_Problem, RobustBoundaryTest) {
 	// Test in robust boundary value form.
