@@ -23,3 +23,23 @@ NCTU CS IOC5167 Software Testing (2018 Spring)
   - [x] Feature code for NextDate Problem
   - [x] Feature code for Commission Problem
 - [x] 5. Revise the code until all tests pass
+
+## HW2
+### Requirement
+* Use your Implementations of the Triangle, NextDate, Commission problems by TDD
+  * using XUnit for writing testing code
+  * google testing framework, PHPUnit, …
+* Analyze test data according to C0,C1, C2, and MCDC coverage metrics
+  * writing test code using these analyses
+### To Do
+- [x] Installing your own XUnit framework and related libraries
+- [x] Using Continuous Integration (Travis)
+- [x] Practice coverage analysis tool (gcov)
+- [x] Writing test code
+  - [x] Test code for Triangle Problem
+  - [x] Test code for NextDate Problem
+  - [x] Test code for Commission Problem
+- [x] Writing feature code
+  - [x] Feature code for Triangle Problem
+  - [x] Feature code for NextDate Problem
+  - [x] Feature code for Commission Problem
