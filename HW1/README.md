@@ -8,8 +8,6 @@
   * writing test code using these analyses
 * Organize your testing code in four forms: week/strong and robust/normal
 
-* **Deadline：2018/4/12**
-
 ## To Do
 - [x] 1. Installing google testing framework and related libraries
 - [x] 2. Analyze & write test code
