@@ -1,45 +1,46 @@
-# 2018Spring-Software-Testing
-NCTU CS IOC5167 Software Testing (2018 Spring)
+# IOC5167 Software Testing (Spring 2018)
+NCTU IOC5167 Software Testing (Spring 2018)
 
 [![Build Status](https://travis-ci.com/JayHsieh1104/2018Spring-SoftwareTesting.svg?token=gpym5wpdmLTpqeh4GgvJ&branch=master)](https://travis-ci.com/JayHsieh1104/2018Spring-SoftwareTesting)
 [![codecov](https://codecov.io/gh/JayHsieh1104/2018Spring-SoftwareTesting/branch/master/graph/badge.svg?token=sBxrc4hRd1)](https://codecov.io/gh/JayHsieh1104/2018Spring-SoftwareTesting)
+
 ## HW1
+
 ### Requirement
-* Implement the Triangle, NextDate, and Commission problems by TDD
-  * using XUnit for writing testing code
-  * In this time, we use google testing framework
-* Analyze boundary value, equivalence class, edge values, and decision table based
-  * writing test code using these analyses
-* Organize your testing code in four forms: week/strong and robust/normal
+1. Implement Triangle, NextDate, and Commission problems with the TDD method
+    * Write test codes with google testing framework
+2. Analyze boundary value, equivalence class, edge values, and decision table
+3. Organize test codes in the four forms: week/strong and robust/normal
+
 ### To Do
-- [x] 1. Installing google testing framework and related libraries
-- [x] 2. Analyze & write test code
-  - [x] Test code for Triangle Problem
-  - [x] Test code for NextDate Problem
-  - [x] Test code for Commission Problem
-- [x] 3. Execute testing (should dispaly failed)
-- [x] 4. Write feature code
-  - [x] Feature code for Triangle Problem
-  - [x] Feature code for NextDate Problem
-  - [x] Feature code for Commission Problem
-- [x] 5. Revise the code until all tests pass
+- [x] 1. Install google testing framework and related libraries
+- [x] 2. Analyze & write test codes
+  - [x] Test codes for Triangle Problem
+  - [x] Test codes for NextDate Problem
+  - [x] Test codes for Commission Problem
+- [x] 3. Execute the test codes and should not pass them
+- [x] 4. Write feature codes
+  - [x] Feature codes for Triangle Problem
+  - [x] Feature codes for NextDate Problem
+  - [x] Feature codes for Commission Problem
+- [x] 5. Revise the codes until passing all of the test cases
 
 ## HW2
+
 ### Requirement
-* Use your Implementations of the Triangle, NextDate, Commission problems by TDD
-  * using XUnit for writing testing code
-  * google testing framework, PHPUnit, …
-* Analyze test data according to C0,C1, C2, and MCDC coverage metrics
-  * writing test code using these analyses
+1. Implement Triangle, NextDate, and Commission problems with the TDD method
+2. Analyze the problems based on C0, C1, C2, and MCDC coverage metrics perspectives
+     * Write test codes with the above analysis
+
 ### To Do
-- [x] Installing your own XUnit framework and related libraries
-- [x] Using Continuous Integration (Travis)
+- [x] Install your own XUnit framework and related libraries
+- [x] Uss Continuous Integration (Travis)
 - [x] Practice coverage analysis tool (gcov)
-- [x] Writing test code
-  - [x] Test code for Triangle Problem
-  - [x] Test code for NextDate Problem
-  - [x] Test code for Commission Problem
-- [x] Writing feature code
-  - [x] Feature code for Triangle Problem
-  - [x] Feature code for NextDate Problem
-  - [x] Feature code for Commission Problem
+- [x] Write testing codes
+  - [x] Test codes of Triangle Problem
+  - [x] Test codes of NextDate Problem
+  - [x] Test codes of Commission Problem
+- [x] Write feature codes
+  - [x] Feature codes of Triangle Problem
+  - [x] Feature codes of NextDate Problem
+  - [x] Feature codes of Commission Problem
